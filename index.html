@@ -1,4 +1,5 @@
 <script>
-  const path = window.location.path;
-  document.write(`<iframe style="height: 70vh; width: 100vw; max-width:50rem;" sandbox src="https://cdn.jsdelivr.net/gh/kabeer11000/DataSets${path || "/"}"></iframe>`);
+  const path = new URLSearchParams(window.location.search).get("p");
+  document.write(`<style> * { margin: 0; padding: 0;} </style>`);
+  document.write(`<iframe border="none" outline="none" frameBorder="0" style="height: 100vh; width: 100vw;" sandbox src="https://cdn.jsdelivr.net/gh/kabeer11000/DataSets${path || "/"}"></iframe>`);
 </script>
