@@ -1,5 +1,8 @@
 <script>
-  const path = new URLSearchParams(window.location.search).get("p");
-  document.write(`<style> * { margin: 0; padding: 0;} </style>`);
-  document.write(`<iframe border="none" outline="none" frameBorder="0" style="height: 100vh; width: 100vw;" sandbox src="https://cdn.jsdelivr.net/gh/kabeer11000/DataSets${path || "/"}"></iframe>`);
+  const Loader = async (e) => {
+    console.log(e);
+    const path = new URLSearchParams(window.location.search).get("p");
+    document.write(`<style> * { margin: 0; padding: 0;} </style>`);
+    document.write(`<iframe border="none" outline="none" frameBorder="0" onload="Loader(this.location.href)" style="height: 100vh; width: 100vw;" sandbox src="https://cdn.jsdelivr.net/gh/kabeer11000/DataSets${path || "/"}"></iframe>`);
+  }
 </script>
