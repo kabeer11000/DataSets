@@ -1,4 +1,4 @@
 <script>
   const path = window.location.path;
-  document.write(`<iframe style="height: 70vh; width: 100vw; max-width:50rem;" sandbox src="https://cdn.jsdelivr.net/gh/kabeer11000/DataSets${path}"></iframe>`);
+  document.write(`<iframe style="height: 70vh; width: 100vw; max-width:50rem;" sandbox src="https://cdn.jsdelivr.net/gh/kabeer11000/DataSets${path || "/"}"></iframe>`);
 </script>
